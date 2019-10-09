@@ -26,10 +26,31 @@
                 break; }
                 case(rock, scissors): {
                 return("You win, Rock breaks scissors");
+                break;}
+                case(rock, paper): 
+                return("You lose, Paper beats Rock")
                 break;
+                case(paper, rock):
+                return("you win, paper beats rock");
+                break;
+                case(paper, paper):
+                return("that's a tie");
+                break;
+                case(paper, scissors):
+                return("You lose, Scissors beats Paper");
+                break;
+                case(scissors, paper):
+                return("You win, Scissors beats Paper");
+                break;
+                case(scissors, scissors):
+                return("That's a tie");
+                break;
+                case(scissors, rock):
+                return("You lose, Rock beats Scissors");
+                break;
+                default: return("something went wrong");
                 }
                 }
-            }
             const playerselection = "rock"
             const computerselection = computerplay();
 
