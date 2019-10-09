@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        Rock-Paper-Scissors
+    </head>
+    <body>
+        <script>
+            let n = Math.random();
+                function computerplay(){
+                rock = "rock";
+                paper = "paper";
+                scissors = "scissors";
+                if(n <= 0.33){
+                    return(rock);
+                }
+                else if (n >= 0.66){
+                    return(paper);
+                } else {
+                    return(scissors);
+                }   
+            }
+            function playRound(playerselection, computerselection){
+                switch(playerselection, computerselection){
+                case(rock, rock):{
+                return("that's a tie");
+                break; }
+                case(rock, scissors): {
+                return("You win, Rock breaks scissors");
+                break;
+                }
+                }
+            }
+            const playerselection = "rock"
+            const computerselection = computerplay();
+
+
+        </script>
+    </body>
+</html>
