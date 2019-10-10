@@ -5,8 +5,8 @@
     </head>
     <body>
         <script>
-            let n = Math.random();
                 function computerplay(){
+                let n = Math.random();
                 if(n <= 0.33){
                     return("rock");
                 }
@@ -17,10 +17,7 @@
                 }   
             }
             function playRound(playerselection, computerselection){
-                let playeranswer = playerselection
-                let computeranswer = computerselection
-
-                switch ((playeranswer) + (computeranswer)) {
+                switch ((playerselection) + (computerselection)) {
                 case("rockrock"):{
                 return("that's a tie");
                 break; }
@@ -55,12 +52,15 @@
             let lose = 0;
             function playGame(){
                 for(let x = 0; x < 5; x++){
-                let playerinput = prompt("Rock, Paper or Scissors").toLowerCase();
-                if (playRound(playerinput, computerplay()).includes("win"))
+                let playerinput = prompt("Rock, Paper or Scissors");
+                let input = playerinput.toLowerCase();
+                let computerinput = computerplay();
+                if (playRound(input, computerinput).includes("win"))
                 {++win;}
-                else if (playRound(playerinput, computerplay()).includes("lose")) 
+                else if (playRound(input, computerinput).includes("lose")) 
                 {++lose}
-                alert(playRound(playerinput, computerplay()) + "\n You've won: " + win + " You've lost " + lose);
+                else {}
+                alert(playRound(input, computerinput) + "\n You've won: " + win + " You've lost " + lose);
                     }
                 }
                 console.log(playGame())
